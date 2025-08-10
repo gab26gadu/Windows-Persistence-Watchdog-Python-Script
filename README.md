@@ -5,7 +5,7 @@
 This project contains a Python script designed to provide advanced persistence, process monitoring, and self-protection features on Windows systems.  
 The script attempts privilege elevation via UAC prompt, creates backup copies, maintains multiple persistence mechanisms (registry keys and scheduled tasks), monitors and restarts itself if terminated, and protects against debugging and analysis tools.
 
-It also includes a batch script for stealth installation named `start.bat`, which copies a user-provided executable to a hidden directory inside `%APPDATA%` (`.SysCache`) and launches it from there, enhancing operational stealth in real or testing scenarios.
+It also includes a batch script for stealth installation named `START.bat`, which copies a user-provided executable to a hidden directory inside `%APPDATA%` (`.SysCache`) and launches it from there, enhancing operational stealth in real or testing scenarios.
 
 ---
 
@@ -17,13 +17,13 @@ It also includes a batch script for stealth installation named `start.bat`, whic
 - Watchdog loop monitoring the process and restarting if killed.  
 - SHA-256 integrity check to detect modifications or tampering.  
 - Automatic termination of suspicious and unauthorized processes.  
-- Batch script (`start.bat`) for stealth launch from a hidden folder (`%APPDATA%\.SysCache`) with system attributes.
+- Batch script (`START.bat`) for stealth launch from a hidden folder (`%APPDATA%\.SysCache`) with system attributes.
 
 ---
 
 ## Usage of the Batch Launcher
 
-The batch script `start.bat` is configured to use an executable named `PC_KILLER.exe`, which **must be provided by the user** and placed in the same folder as the batch file.
+The batch script `START.bat` is configured to use an executable named `PC_KILLER.exe`, which **must be provided by the user** and placed in the same folder as the batch file.
 
 The batch script:  
 - Creates a hidden folder `%APPDATA%\.SysCache` if it doesn’t exist.  
