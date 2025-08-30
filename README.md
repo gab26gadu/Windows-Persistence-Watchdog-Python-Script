@@ -70,7 +70,7 @@ In short, without admin privileges, the script runs in a limited mode losing man
 
 ## License
 
-MIT License (or choose your own)
+MIT License
 
 ---
 
